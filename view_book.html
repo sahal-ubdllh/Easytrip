@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Pesanan</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .pesanan .top-bar {
+            max-width: 100rem;
+            margin: 0 auto 2rem;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 2rem;
+        }
+        .pesanan table { margin-top: 2rem; }
+        #loading-msg, #empty-msg {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--light-black);
+        }
+        #empty-msg { display: none; }
+    </style>
+</head>
+<body>
+
+<section class="header">
+    <a href="index.html" class="logo">EasyTrip.</a>
+    <nav class="navbar">
+        <a href="index.html">BERANDA</a>
+        <a href="about.html">TENTANG</a>
+        <a href="package.html">PAKET</a>
+        <a href="book.html">PEMESANAN</a>
+        <a href="view_book.html" class="fas fa-shopping-cart"></a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+</section>
+
+<div class="heading" style="background: url(assets/bg-about.jpg) no-repeat center/cover;">
+    <h1>Pesanan saya</h1>
+</div>
+
+<section class="pesanan">
+    <h1 class="heading-title">Detail Pesanan</h1>
+
+    <div class="top-bar">
+        <span id="logout-btn" class="btn" style="cursor:pointer;">Logout</span>
+    </div>
+
+    <p id="loading-msg">Memuat data...</p>
+    <p id="empty-msg">Belum ada pesanan.</p>
+
+    <table border="1" id="booking-table" style="display:none;">
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Email</th>
+                <th>No Telepon</th>
+                <th>Alamat</th>
+                <th>Tujuan</th>
+                <th>Jumlah Orang</th>
+                <th>Arrivals</th>
+                <th>Leaving</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody id="booking-tbody">
+        </tbody>
+    </table>
+</section>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="index.html"><i class="fas fa-angle-right"></i>BERANDA</a>
+            <a href="about.html"><i class="fas fa-angle-right"></i>TENTANG KAMI</a>
+            <a href="package.html"><i class="fas fa-angle-right"></i>PAKET</a>
+            <a href="book.html"><i class="fas fa-angle-right"></i>PEMESANAN</a>
+        </div>
+        <div class="box">
+            <h3>Extra Links</h3>
+            <a href="#"><i class="fas fa-angle-right"></i>Ask Questions</a>
+            <a href="#"><i class="fas fa-angle-right"></i>About Us</a>
+            <a href="#"><i class="fas fa-angle-right"></i>Privacy Policy</a>
+            <a href="#"><i class="fas fa-angle-right"></i>Terms of Use</a>
+        </div>
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#"><i class="fas fa-phone"></i>+62 859-1133-87744</a>
+            <a href="#"><i class="fas fa-envelope"></i>sahalubaidillah3@gmail.com</a>
+            <a href="#"><i class="fas fa-map"></i>Majalengka, Indonesia</a>
+        </div>
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a>
+        </div>
+    </div>
+    <div class="credit">Created by <span>Mr. Sahal Ubaidillah Gunardo</span> | All Rights Reserved!</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/admin.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

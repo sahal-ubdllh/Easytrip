@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyTrip.</title>
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #form-message {
+            display: none;
+            margin: 1.5rem 0;
+            padding: 1.2rem 1.6rem;
+            border-radius: 10px;
+            font-size: 1.6rem;
+        }
+        #form-message.success {
+            display: block;
+            background: #d7f7dd;
+            color: #196b2c;
+            border: 1px solid #196b2c;
+        }
+        #form-message.error {
+            display: block;
+            background: #fbdada;
+            color: #8a1c1c;
+            border: 1px solid #8a1c1c;
+        }
+        .btn[disabled] {
+            opacity: .6;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<!-- header section -->
+<section class="header">
+    <a href="index.html" class="logo">EasyTrip.</a>
+
+    <nav class="navbar">
+        <a href="index.html">BERANDA</a>
+        <a href="about.html">TENTANG</a>
+        <a href="package.html">PAKET</a>
+        <a href="book.html">PEMESANAN</a>
+        <a href="view_book.html" class="fas fa-shopping-cart"></a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+
+<div class="heading" style="background: url(assets/bg-pesan.jpg) no-repeat center/cover;">
+    <h1>Pesan sekarang</h1>
+</div>
+
+<!-- booking section starts -->
+<section class="booking">
+
+    <h1 class="heading-title">Pesan perjalananmu Sekarang!</h1>
+
+    <div id="form-message"></div>
+
+    <form id="book-form" class="book-form">
+        <div class="flex">
+            <div class="inputBox">
+                <span>Nama :</span>
+                <input type="text" placeholder="Masukkan nama anda" name="name" required>
+            </div>
+            <div class="inputBox">
+                <span>Email :</span>
+                <input type="email" placeholder="Masukkan email anda" name="email" required>
+            </div>
+            <div class="inputBox">
+                <span>No Telepon :</span>
+                <input type="text" placeholder="Masukkan no telepon anda" name="phone" required>
+            </div>
+            <div class="inputBox">
+                <span>Alamat :</span>
+                <input type="text" placeholder="Masukkan alamat anda" name="address" required>
+            </div>
+            <div class="form-container">
+                <span>Tujuan  :</span>
+                <select class="form-input" name="location" required>
+                    <option value="" disabled selected>Pilih Paket Wisata</option>
+                    <option value="Paket Bali">Paket Bali</option>
+                    <option value="Paket Bromo">Paket Bromo</option>
+                    <option value="Paket Bunaken">Paket Bunaken</option>
+                    <option value="Paket Danau Toba">Paket Danau Toba</option>
+                    <option value="Paket Derawan">Paket Derawan</option>
+                    <option value="Paket Gorontalo">Paket Gorontalo</option>
+                    <option value="Paket Labuan Bajo">Paket Labuan Bajo</option>
+                    <option value="Paket Raja Ampat">Paket Raja Ampat</option>
+                    <option value="Paket Yogyakarta">Paket Yogyakarta</option>
+                </select>
+            </div>
+
+            <div class="inputBox">
+                <span>Jumlah Orang :</span>
+                <input type="number" min="1" placeholder="Berapa banyak orang" name="guests" required>
+            </div>
+            <div class="inputBox">
+                <span>Kedatangan :</span>
+                <input type="date" name="arrivals" required>
+            </div>
+            <div class="inputBox">
+                <span>Kembali :</span>
+                <input type="date" name="leaving" required>
+            </div>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn">Kirim</button>
+
+    </form>
+
+</section>
+<!-- booking section ends -->
+
+
+
+<!-- footer section starts -->
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="index.html"><i class="fas fa-angle-right"></i>BERANDA</a>
+            <a href="about.html"><i class="fas fa-angle-right"></i>TENTANG KAMI</a>
+            <a href="package.html"><i class="fas fa-angle-right"></i>PAKET</a>
+            <a href="book.html"><i class="fas fa-angle-right"></i>PEMESANAN</a>
+        </div>
+
+        <div class="box">
+            <h3>Extra Links</h3>
+            <a href="#"><i class="fas fa-angle-right"></i>Ask Questions</a>
+            <a href="#"><i class="fas fa-angle-right"></i>About Us</a>
+            <a href="#"><i class="fas fa-angle-right"></i>Privacy Policy</a>
+            <a href="#"><i class="fas fa-angle-right"></i>Terms of Use</a>
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#"><i class="fas fa-phone"></i>+62 859-1133-87744</a>
+            <a href="#"><i class="fas fa-envelope"></i>sahalubaidillah3@gmail.com</a>
+            <a href="#"><i class="fas fa-map"></i>Majalengka, Indonesia</a>
+        </div>
+
+        <div class="box">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="https://www.instagram.com/_sahalubdllh27/"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://www.linkedin.com/in/sahal-ubaidillah-gunardo-49a829277/"><i class="fab fa-linkedin"></i>Linkedin</a>
+        </div>
+    </div>
+    <div class="credit">Created by <span>Mr. Sahal Ubaidillah Gunardo</span> | All Rights Reserved!</div>
+</section>
+
+
+<!-- swiper js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- supabase js -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/book.js"></script>
+<!-- custom js -->
+<script src="scripts.js"></script>
+</body>
+</html>

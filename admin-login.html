@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - EasyTrip.</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .login-wrap {
+            max-width: 45rem;
+            margin: 6rem auto;
+            padding: 3rem;
+            background: var(--light-bg);
+            border-radius: 15px;
+        }
+        .login-wrap h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--black);
+        }
+        .login-wrap .inputBox {
+            margin-bottom: 1.5rem;
+        }
+        .login-wrap .inputBox span {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--light-black);
+            margin-bottom: .5rem;
+        }
+        .login-wrap .inputBox input {
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.6rem;
+            border: var(--border);
+            border-radius: 10px;
+        }
+        #login-message {
+            display: none;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.4rem;
+            border-radius: 10px;
+            font-size: 1.5rem;
+        }
+        #login-message.error {
+            display: block;
+            background: #fbdada;
+            color: #8a1c1c;
+            border: 1px solid #8a1c1c;
+        }
+    </style>
+</head>
+<body>
+
+<section class="header">
+    <a href="index.html" class="logo">EasyTrip.</a>
+    <nav class="navbar">
+        <a href="index.html">BERANDA</a>
+        <a href="about.html">TENTANG</a>
+        <a href="package.html">PAKET</a>
+        <a href="book.html">PEMESANAN</a>
+    </nav>
+</section>
+
+<div class="login-wrap">
+    <h1>Login Admin</h1>
+    <div id="login-message"></div>
+    <form id="login-form">
+        <div class="inputBox">
+            <span>Email</span>
+            <input type="email" name="email" required>
+        </div>
+        <div class="inputBox">
+            <span>Password</span>
+            <input type="password" name="password" required>
+        </div>
+        <button type="submit" id="login-btn" class="btn" style="width:100%;">Masuk</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
